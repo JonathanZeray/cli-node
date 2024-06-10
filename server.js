@@ -1,7 +1,7 @@
 const { Command } = require("commander");
 const program = new Command();
 
-program.version("1.0.0").description("A simple CLI application");
+program.version("1.0.0").description("My own CLI");
 
 program
   .command("hello")

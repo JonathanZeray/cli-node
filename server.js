@@ -6,8 +6,10 @@ program.version("1.0.0").description("My own CLI");
 program
   .command("hello")
   .description("Respond with a greeting")
-  .action(() => {
-    console.log("Hello from command!");
+  .option("-n, --name <type>", "Add your name")
+  .action((user) => {
+    const name = user.name ? user.name : "world";
+    console.log(`Hello, ${name}!`);
   });
 
 program
